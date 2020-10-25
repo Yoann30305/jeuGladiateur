@@ -23,9 +23,9 @@ public class JeuGladiateurs {
         // *************************************************************************
         // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
         // TODO : Afficher les infos de chaque personnage
-        Personnage affiche;
-        affiche = new Personnage();
-        affiche.afficherInfosPersonnage();
+       personnage1.afficherInfosPersonnage();
+       System.out.println("");
+       personnage2.afficherInfosPersonnage();
         
         // TODO : Afficher le message du début du combat
        AffichageEcran debut;
