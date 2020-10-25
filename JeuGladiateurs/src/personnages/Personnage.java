@@ -7,11 +7,11 @@ public class Personnage {
     // *************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     //TODO : Mettre vos attributs ici
-    String nom;
-    int pointsDeVie;
-    int valeurMaxAttaque;
-    int valeurDefense;
-    int initiative;
+    private String nom;
+    private int pvs;
+    private int attaqueMax;
+    private int defense;
+    private int ini;
     
     
     // </editor-fold>
@@ -22,13 +22,19 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
         // TODO : Constructeur AVEC paramètres
-        
-        
-    
+        this.nom = nom;
+        this.attaqueMax = attaqueMax;
+        this.defense = defense;
+        this.pvs = pvs;
+        this.ini = ini;
     }
     public Personnage() {
         // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
-  
+        nom = "";
+        attaqueMax = 0;
+        defense = 0;
+        pvs = 0;
+        ini = 0;
         
         
     }
@@ -39,13 +45,46 @@ public class Personnage {
     // *************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     // TODO : Les getters
-
+    public String getNom() {
+        return nom;
+    }
     
+    public int getPvs() {
+        return pvs;
+    }
+     
+    public int getAttaqueMax() {
+        return attaqueMax;
+    }
     
+    public int getDefense() {
+        return defense;
+    }
+    
+    public int getIni() {
+        return ini;
+    }
     // TODO : Les setters
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
     
+    public void setNom(int pvs) {
+        this.pvs = pvs;
+    }
     
+    public void setAttaqueMax(int attaqueMax) {
+        this.attaqueMax = attaqueMax;
+    }
+    
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+    
+    public void setIni(int ini) {
+        this.ini = ini;
+    }
     // </editor-fold>
 
     // *************************************************************************

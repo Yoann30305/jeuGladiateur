@@ -25,7 +25,9 @@ public class JeuGladiateurs {
         // TODO : Afficher les infos de chaque personnage
             
         // TODO : Afficher le message du début du combat
-       
+       AffichageEcran debut;
+       debut = new AffichageEcran();
+       debut.afficherDebutCombat();
        
         
         
