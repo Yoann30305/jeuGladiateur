@@ -1,4 +1,5 @@
 package personnages;
+import java.util.Random;
 
 public class Personnage {
 
@@ -99,7 +100,7 @@ public class Personnage {
         System.out.println("    Points de vies : " + this.pvs);
         System.out.println("    Initiative : " + this.ini);
         
-        if (pvs >= 0) {
+        if (pvs <= 0) {
             System.out.println("    Statut : mort");
             }
         else {
@@ -112,7 +113,9 @@ public class Personnage {
     private int attaqueCalcul() {
         // TODO : Retourner la valeur de l'attaque du personnage.
         // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
-        return 0;
+        Random rand = new Random();
+        int nbreAleatoire = rand.nextInt(attaqueMax+1);
+        return nbreAleatoire;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
