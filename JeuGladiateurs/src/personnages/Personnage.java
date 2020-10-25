@@ -7,7 +7,11 @@ public class Personnage {
     // *************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     //TODO : Mettre vos attributs ici
-    
+    String nom;
+    int pointsDeVie;
+    int valeurMaxAttaque;
+    int valeurDefense;
+    int initiative;
     
     
     // </editor-fold>
@@ -50,7 +54,7 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
-  
+        
     }
 
     private int attaqueCalcul() {
