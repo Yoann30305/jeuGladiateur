@@ -34,19 +34,32 @@ public class JeuGladiateurs {
        debut = new AffichageEcran();
        debut.afficherDebutCombat();
        
-       while(personnage1.pvs > 0 && personnage2.pvs > 0){
+       
+    
+    
+    
+    // </editor-fold>
+
+        // *************************************************************************
+        // *************************************************************************
+        // *************************************************************************
+        // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
+        // TODO : La boucle contenant les étapes du combat
+        
+        while(personnage1.getPvs() > 0 && personnage2.getPvs() > 0){
+           
        //affichage tour
        tour.afficheTour();
        System.out.println("");
        
        //boucle initiative
        for (int i = 0;i<=100;i++){
-           if (personnage1.ini == i){
+           if (i == personnage1.getIni()){
                personnage1.frapperPersonnage(personnage2);
            }
-           if (personnage2.ini == i){
-           personnage2.frapperPersonnage(personnage2);
-       }
+           if (i == personnage2.getIni()){
+               personnage2.frapperPersonnage(personnage1);
+           }
        }
        
        //afficher separateur
@@ -71,28 +84,6 @@ public class JeuGladiateurs {
        affichage.afficherSeparateurDeTour();
        }
     
-    //affichage messsage victoire
-       
-    System.out.println("");
-    
-    if (personnage1.pvs > 0){
-    System.out.println(personnage1.nom + " gagne le combat !!! ");
-}
-    
-    if (personnage2.pvs > 0){
-    System.out.println(personnage2.nom + " gagne le combat !!! ");
-        
-        
-        
-    }
-    
-    // </editor-fold>
-
-        // *************************************************************************
-        // *************************************************************************
-        // *************************************************************************
-        // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
-        // TODO : La boucle contenant les étapes du combat
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
 }
