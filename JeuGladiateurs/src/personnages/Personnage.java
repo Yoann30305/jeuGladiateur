@@ -104,8 +104,8 @@ public class Personnage {
             System.out.println("    Statut : mort");
             }
         else {
-                System.out.println("    Statut : vivant");
-                }
+            System.out.println("    Statut : vivant");
+            }
             
        
     }
@@ -114,7 +114,7 @@ public class Personnage {
         // TODO : Retourner la valeur de l'attaque du personnage.
         // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
         Random rand = new Random();
-        int nbreAleatoire = rand.nextInt(attaqueMax+1);
+        int nbreAleatoire = rand.nextInt(attaqueMax +1 );
         return nbreAleatoire;
     }
 
@@ -122,10 +122,33 @@ public class Personnage {
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         //modifier les points de vie du personnage cible, afficher les détails
         // sur l'attaque, tel que montré dans l'énoncé.
+        int forceDeFrappe = attaqueCalcul();
+        int dommages =  forceDeFrappe - personnageCible.defense;
+        
+        if (dommages > 0) {
+            personnageCible.pvs = personnageCible.pvs - dommages;
+        }
+        
+        
+        if (personnageCible.pvs < 0){
+            personnageCible.pvs = 0;
+        }
+        
+        if (dommages < 0){
+            dommages = 0;
+        }
+        
+        System.out.println(nom + " attaque avec une puissance de : " + forceDeFrappe);
+        System.out.println(personnageCible.nom + " a une défense de : " + personnageCible.defense);
+        System.out.println("Les dommages sont donc de : " + dommages);
+        System.out.println("");
     }
 
     public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+         Random rand = new Random();
+        ini = rand.nextInt(100 +1);
+        
     }
     // </editor-fold>
 }
