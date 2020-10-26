@@ -70,8 +70,10 @@ public class JeuGladiateurs {
        //separateur de tour
        affichage.afficherSeparateurDeTour();
        }
-      
-       System.out.println("");
+    
+    //affichage messsage victoire
+       
+    System.out.println("");
     
     if (personnage1.pvs > 0){
     System.out.println(personnage1.nom + " gagne le combat !!! ");
