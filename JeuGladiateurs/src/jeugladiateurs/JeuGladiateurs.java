@@ -34,7 +34,42 @@ public class JeuGladiateurs {
        debut = new AffichageEcran();
        debut.afficherDebutCombat();
        
-  
+       while(personnage1.pvs > 0 && personnage2.pvs > 0){
+       //affichage tour
+       tour.afficheTour();
+       System.out.println("");
+       
+       //boucle initiative
+       for (int i = 0;i<=100;i++){
+           if (personnage1.ini == i){
+               personnage1.frapperPersonnage(personnage2);
+           }
+           if (personnage2.ini == i){
+           personnage2.frapperPersonnage(personnage2);
+       }
+       }
+       
+       //afficher separateur
+       System.out.println("");
+       affichage.afficherSeparateurInfosPerso();
+       
+       //afficher infos persos
+       System.out.println("");
+       personnage1.afficherInfosPersonnage();
+       System.out.println("");
+       personnage2.afficherInfosPersonnage();
+       System.out.println("");
+       
+       //changement valeur ini
+       personnage1.setNewInitiativeRandom();
+       personnage2.setNewInitiativeRandom();
+       
+       //Incrémenter le compteur de tour
+       tour.augmenteTour();
+       
+       //separateur de tour
+       affichage.afficherSeparateurDeTour();
+       }
       
         
         // </editor-fold>
