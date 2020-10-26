@@ -36,8 +36,6 @@ public class Personnage {
         defense = 0;
         pvs = 0;
         ini = 0;
-        
-        
     }
     // </editor-fold>
 
@@ -152,3 +150,5 @@ public class Personnage {
     }
     // </editor-fold>
 }
+
+
