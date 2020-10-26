@@ -82,7 +82,11 @@ public class JeuGladiateurs {
     if (personnage2.pvs > 0){
     System.out.println(personnage2.nom + " gagne le combat !!! ");
         
-        // </editor-fold>
+        
+        
+    }
+    
+    // </editor-fold>
 
         // *************************************************************************
         // *************************************************************************
@@ -91,10 +95,6 @@ public class JeuGladiateurs {
         // TODO : La boucle contenant les étapes du combat
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
-        
-    }
-    
-    
 }
 
     
